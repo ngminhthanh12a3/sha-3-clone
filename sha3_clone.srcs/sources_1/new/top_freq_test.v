@@ -34,7 +34,8 @@ module top_freq_test(
     localparam [31:0] block_words = 32'd1152 >> 'd5;
     localparam [31:0] output_words = 32'd224 >> 'd5;
     
-    wire clk = CLK100MHZ, rst_n = CPU_RESETN;
+    wire clk;// = CLK100MHZ;
+    wire rst_n = CPU_RESETN;
     
     wire tb_rdy;
     
@@ -47,6 +48,16 @@ module top_freq_test(
     localparam SHA3_PHASE_WAIT_RESP = 'd3;
     localparam SHA3_PHASE_EVAL = 'd4;
     
+    clk_wiz_0 clk_wiz_0_ins (
+      // Clock out ports
+      .clk_out1(clk),
+      // Status and control signals
+      .reset(),
+      .locked(),
+     // Clock in ports
+      .clk_in1(CLK100MHZ)
+     );
+     
     always @(posedge clk or negedge rst_n) begin
         if (~rst_n) begin
             sha3_phase <= SHA3_PHASE_WAIT;

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Sun Mar  1 09:44:29 2026
+| Date         : Sun Mar  1 11:05:10 2026
 | Host         : thanh-G7-MD running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file top_freq_test_utilization_synth.rpt -pb top_freq_test_utilization_synth.pb
 | Design       : top_freq_test
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 3999 |     0 |          0 |     63400 |  6.31 |
-|   LUT as Logic          | 3999 |     0 |          0 |     63400 |  6.31 |
+| Slice LUTs*             | 4243 |     0 |          0 |     63400 |  6.69 |
+|   LUT as Logic          | 4243 |     0 |          0 |     63400 |  6.69 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
 | Slice Registers         | 2048 |     0 |          0 |    126800 |  1.62 |
 |   Register as Flip Flop | 2048 |     0 |          0 |    126800 |  1.62 |
@@ -95,7 +95,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    3 |     0 |          0 |       210 |  1.43 |
+| Bonded IOB                  |    2 |     0 |          0 |       210 |  0.95 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -117,7 +117,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFGCTRL   |    0 |     0 |          0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |          0 |        24 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         6 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         6 |  0.00 |
@@ -153,8 +153,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | LUT6     | 2484 |                 LUT |
 | FDRE     | 1837 |        Flop & Latch |
-| LUT2     | 1475 |                 LUT |
-| LUT5     |  645 |                 LUT |
+| LUT2     | 1469 |                 LUT |
+| LUT5     |  651 |                 LUT |
 | FDCE     |  177 |        Flop & Latch |
 | MUXF7    |  170 |               MuxFx |
 | MUXF8    |   68 |               MuxFx |
@@ -163,18 +163,19 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | LUT4     |   19 |                 LUT |
 | LUT1     |    5 |                 LUT |
 | CARRY4   |    3 |          CarryLogic |
-| IBUF     |    2 |                  IO |
 | OBUF     |    1 |                  IO |
-| BUFG     |    1 |               Clock |
+| IBUF     |    1 |                  IO |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+----------+------+
-| Ref Name | Used |
-+----------+------+
++-----------+------+
+|  Ref Name | Used |
++-----------+------+
+| clk_wiz_0 |    1 |
++-----------+------+
 
 
 9. Instantiated Netlists
