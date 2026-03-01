@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+`define CYCLE_CACHE 100
 module top_throughput(
     input CLK100MHZ,
     input CPU_RESETN,
@@ -29,6 +29,7 @@ module top_throughput(
     reg [27:0] clk_cnt;
     reg [31:0] cycle_cnt;
     wire clk = CLK100MHZ, rst_n = CPU_RESETN, UART_TXD = UART_RXD_OUT;
+    wire clk_400;
     
 //    reg cs, we;
 //    reg [7:0] address;
@@ -49,7 +50,10 @@ module top_throughput(
 //       .READY(),
 //       .UART_TX(UART_TXD)
 //    );
-    always @(posedge clk)
+
+    reg [31:0] cycle_cache[`CYCLE_CACHE-1:0];
+    
+    always @(posedge clk_400)
     begin
         clk_cnt <= clk_cnt + 1;
     end
@@ -58,4 +62,15 @@ module top_throughput(
     begin
         LED[0] <= ~LED[0];
     end
+    
+    
+    clk_wiz_0 clk_wiz_0_ins (
+      // Clock out ports
+      .clk_out1(clk_400),
+      // Status and control signals
+      .reset(),
+      .locked(),
+     // Clock in ports
+      .clk_in1(CLK100MHZ)
+     );
 endmodule

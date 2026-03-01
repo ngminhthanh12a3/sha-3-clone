@@ -1,0 +1,93 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Sun Mar  1 09:46:07 2026
+| Host         : thanh-G7-MD running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_control_sets -verbose -file top_freq_test_control_sets_placed.rpt
+| Design       : top_freq_test
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    15 |
+|    Minimum number of control sets                        |    15 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    40 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    15 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    11 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              21 |            8 |
+| No           | No                    | Yes                    |             125 |           46 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |            1613 |          673 |
+| Yes          | No                    | Yes                    |              86 |           18 |
+| Yes          | Yes                   | No                     |             203 |           55 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+-----------------------------+--------------------------+------------------+----------------+--------------+
+|     Clock Signal     |        Enable Signal        |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+-----------------------------+--------------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG | dut/st[5][63]_i_1_n_0       | dut/CPU_RESETN           |                1 |              5 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG | wr_data_rd_cnt[5]_i_1_n_0   | dut/CPU_RESETN           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | tb_wr_data[26]_i_1_n_0      | dut/CPU_RESETN           |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | tb_addr[6]_i_1_n_0          |                          |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG |                             |                          |                8 |             21 |         2.62 |
+|  CLK100MHZ_IBUF_BUFG | dut/sha3_phase_reg[2]_0     | eval_data[6][31]_i_1_n_0 |                8 |             29 |         3.62 |
+|  CLK100MHZ_IBUF_BUFG | dut/wr_data_rd_cnt_reg[0]   | eval_data[0][31]_i_1_n_0 |               10 |             29 |         2.90 |
+|  CLK100MHZ_IBUF_BUFG | dut/wr_data_rd_cnt_reg[0]_0 | eval_data[1][31]_i_1_n_0 |                5 |             29 |         5.80 |
+|  CLK100MHZ_IBUF_BUFG | dut/wr_data_rd_cnt_reg[0]_1 | eval_data[2][31]_i_1_n_0 |                9 |             29 |         3.22 |
+|  CLK100MHZ_IBUF_BUFG | dut/wr_data_rd_cnt_reg[2]_0 | eval_data[3][31]_i_1_n_0 |                9 |             29 |         3.22 |
+|  CLK100MHZ_IBUF_BUFG | dut/wr_data_rd_cnt_reg[2]_1 | eval_data[4][31]_i_1_n_0 |                7 |             29 |         4.14 |
+|  CLK100MHZ_IBUF_BUFG | dut/wr_data_rd_cnt_reg[2]_2 | eval_data[5][31]_i_1_n_0 |                7 |             29 |         4.14 |
+|  CLK100MHZ_IBUF_BUFG | hash_shreg[482]             | dut/CPU_RESETN           |               12 |             67 |         5.58 |
+|  CLK100MHZ_IBUF_BUFG |                             | dut/CPU_RESETN           |               46 |            125 |         2.72 |
+|  CLK100MHZ_IBUF_BUFG | dut/st[5][63]_i_1_n_0       |                          |              668 |           1600 |         2.40 |
++----------------------+-----------------------------+--------------------------+------------------+----------------+--------------+
+
+

@@ -3,22 +3,22 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Feb 16 07:42:36 2026
-# Process ID         : 58443
+# Start of session at: Sun Mar  1 09:46:54 2026
+# Process ID         : 65607
 # Current directory  : /home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/impl_1
-# Command line       : vivado -log top_throughput.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_throughput.tcl -notrace
-# Log file           : /home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/impl_1/top_throughput.vdi
+# Command line       : vivado -log top_freq_test.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_freq_test.tcl -notrace
+# Log file           : /home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/impl_1/top_freq_test.vdi
 # Journal file       : /home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/impl_1/vivado.jou
 # Running On         : thanh-G7-MD
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 22.04.5 LTS
 # Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
-# CPU Frequency      : 800.000 MHz
+# CPU Frequency      : 1204.446 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 67195 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 69343 MB
-# Available Virtual  : 62651 MB
+# Available Virtual  : 63631 MB
 #-----------------------------------------------------------
-source top_throughput.tcl -notrace
+source top_freq_test.tcl -notrace

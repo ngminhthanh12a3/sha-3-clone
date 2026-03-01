@@ -7,4 +7,4 @@
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log top_throughput.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_throughput.tcl -notrace
+vivado -log top_freq_test.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_freq_test.tcl -notrace
