@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Sun Mar  1 11:06:58 2026
+| Date         : Tue Mar  3 15:16:45 2026
 | Host         : thanh-G7-MD running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_control_sets -verbose -file top_freq_test_control_sets_placed.rpt
 | Design       : top_freq_test
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    15 |
-|    Minimum number of control sets                        |    15 |
+| Total control sets                                       |    26 |
+|    Minimum number of control sets                        |    26 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    39 |
+| Unused register locations in slices containing registers |    66 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    15 |
+| Total control sets |    26 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     1 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    11 |
+| >= 16              |    22 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,36 +58,47 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              21 |            7 |
-| No           | No                    | Yes                    |             134 |           45 |
+| No           | No                    | No                     |              48 |           13 |
+| No           | No                    | Yes                    |             125 |           46 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |            1613 |          763 |
-| Yes          | No                    | Yes                    |              86 |           18 |
-| Yes          | Yes                   | No                     |             203 |           90 |
+| Yes          | No                    | No                     |            1621 |          705 |
+| Yes          | No                    | Yes                    |             332 |           56 |
+| Yes          | Yes                   | No                     |             464 |          147 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------+-----------------------------+--------------------------+------------------+----------------+--------------+
-|         Clock Signal         |        Enable Signal        |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
-+------------------------------+-----------------------------+--------------------------+------------------+----------------+--------------+
-|  clk_wiz_0_ins/inst/clk_out1 | dut/st[5][63]_i_1_n_0       | dut/CPU_RESETN           |                2 |              5 |         2.50 |
-|  clk_wiz_0_ins/inst/clk_out1 | wr_data_rd_cnt[5]_i_1_n_0   | dut/CPU_RESETN           |                2 |              6 |         3.00 |
-|  clk_wiz_0_ins/inst/clk_out1 | tb_wr_data[26]_i_1_n_0      | dut/CPU_RESETN           |                3 |              8 |         2.67 |
-|  clk_wiz_0_ins/inst/clk_out1 | tb_addr[6]_i_1_n_0          |                          |               11 |             13 |         1.18 |
-|  clk_wiz_0_ins/inst/clk_out1 |                             |                          |                7 |             21 |         3.00 |
-|  clk_wiz_0_ins/inst/clk_out1 | dut/sha3_phase_reg[2]_0     | eval_data[6][31]_i_1_n_0 |               11 |             29 |         2.64 |
-|  clk_wiz_0_ins/inst/clk_out1 | dut/wr_data_rd_cnt_reg[0]   | eval_data[0][31]_i_1_n_0 |               16 |             29 |         1.81 |
-|  clk_wiz_0_ins/inst/clk_out1 | dut/wr_data_rd_cnt_reg[0]_0 | eval_data[1][31]_i_1_n_0 |               10 |             29 |         2.90 |
-|  clk_wiz_0_ins/inst/clk_out1 | dut/wr_data_rd_cnt_reg[0]_1 | eval_data[2][31]_i_1_n_0 |               15 |             29 |         1.93 |
-|  clk_wiz_0_ins/inst/clk_out1 | dut/wr_data_rd_cnt_reg[2]_0 | eval_data[3][31]_i_1_n_0 |               13 |             29 |         2.23 |
-|  clk_wiz_0_ins/inst/clk_out1 | dut/wr_data_rd_cnt_reg[2]_1 | eval_data[4][31]_i_1_n_0 |               11 |             29 |         2.64 |
-|  clk_wiz_0_ins/inst/clk_out1 | dut/wr_data_rd_cnt_reg[2]_2 | eval_data[5][31]_i_1_n_0 |               14 |             29 |         2.07 |
-|  clk_wiz_0_ins/inst/clk_out1 | hash_shreg[482]             | dut/CPU_RESETN           |               11 |             67 |         6.09 |
-|  clk_wiz_0_ins/inst/clk_out1 |                             | dut/CPU_RESETN           |               45 |            134 |         2.98 |
-|  clk_wiz_0_ins/inst/clk_out1 | dut/st[5][63]_i_1_n_0       |                          |              752 |           1600 |         2.13 |
-+------------------------------+-----------------------------+--------------------------+------------------+----------------+--------------+
++----------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |                    Enable Signal                    |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/dut/st[5][63]_i_1_n_0     | freq_test_part_empty_ins2/blk[0][63]_i_2_n_0        |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/wr_data_rd_cnt[5]_i_1_n_0 | freq_test_part_empty_ins2/blk[0][63]_i_2_n_0        |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/tb_wr_data[0]             | freq_test_part_empty_ins2/blk[0][63]_i_2_n_0        |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/tb_addr[6]_i_1_n_0        |                                                     |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/hash_shreg[482]           |                                                     |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_cnt[0]               | freq_test_part_empty_ins2/blk[0][63]_i_2_n_0        |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[3][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[3][31]_i_1_n_0  |                5 |             29 |         5.80 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[9][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[9][31]_i_1_n_0  |               18 |             29 |         1.61 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[8][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[8][31]_i_1_n_0  |               13 |             29 |         2.23 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[7][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[7][31]_i_1_n_0  |               12 |             29 |         2.42 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[6][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[6][31]_i_1_n_0  |               12 |             29 |         2.42 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[5][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[5][31]_i_1_n_0  |               13 |             29 |         2.23 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[4][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[4][31]_i_1_n_0  |                5 |             29 |         5.80 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[2][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[2][31]_i_1_n_0  |                5 |             29 |         5.80 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[1][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[1][31]_i_1_n_0  |                7 |             29 |         4.14 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[15][31]_i_2_n_0 | freq_test_part_empty_ins2/eval_data[15][31]_i_1_n_0 |                7 |             29 |         4.14 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[14][31]_i_2_n_0 | freq_test_part_empty_ins2/eval_data[14][31]_i_1_n_0 |                7 |             29 |         4.14 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[13][31]_i_2_n_0 | freq_test_part_empty_ins2/eval_data[13][31]_i_1_n_0 |                6 |             29 |         4.83 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[12][31]_i_2_n_0 | freq_test_part_empty_ins2/eval_data[12][31]_i_1_n_0 |                8 |             29 |         3.62 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[11][31]_i_2_n_0 | freq_test_part_empty_ins2/eval_data[11][31]_i_1_n_0 |                7 |             29 |         4.14 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[10][31]_i_2_n_0 | freq_test_part_empty_ins2/eval_data[10][31]_i_1_n_0 |               11 |             29 |         2.64 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/eval_data[0][31]_i_2_n_0  | freq_test_part_empty_ins2/eval_data[0][31]_i_1_n_0  |               11 |             29 |         2.64 |
+|  CLK100MHZ_IBUF_BUFG |                                                     |                                                     |               13 |             48 |         3.69 |
+|  CLK100MHZ_IBUF_BUFG |                                                     | freq_test_part_empty_ins2/blk[0][63]_i_2_n_0        |               46 |            125 |         2.72 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/hash_shreg[482]           | freq_test_part_empty_ins2/blk[0][63]_i_2_n_0        |               43 |            295 |         6.86 |
+|  CLK100MHZ_IBUF_BUFG | freq_test_part_empty_ins2/dut/st[5][63]_i_1_n_0     |                                                     |              697 |           1600 |         2.30 |
++----------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+--------------+
 
 

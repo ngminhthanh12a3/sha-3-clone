@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="368.667 ns"></ZoomStartTime>
-      <ZoomEndTime time="388.668 ns"></ZoomEndTime>
-      <Cursor1Time time="370.000 ns"></Cursor1Time>
+      <ZoomStartTime time="200.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="962.246 ns"></ZoomEndTime>
+      <Cursor1Time time="486.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="170"></NameColumnWidth>
-      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+      <NameColumnWidth column_width="237"></NameColumnWidth>
+      <ValueColumnWidth column_width="100"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="25" />
    <wvobject type="logic" fp_name="/tb_freq_sim/tb_clk">
       <obj_property name="ElementShortName">tb_clk</obj_property>
       <obj_property name="ObjectShortName">tb_clk</obj_property>
@@ -28,72 +28,98 @@
       <obj_property name="ElementShortName">tb_rst_n</obj_property>
       <obj_property name="ObjectShortName">tb_rst_n</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/sha3_phase">
+      <obj_property name="ElementShortName">sha3_phase[2:0]</obj_property>
+      <obj_property name="ObjectShortName">sha3_phase[2:0]</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/tb_freq_sim/CLK_HALF_PERIOD">
       <obj_property name="ElementShortName">CLK_HALF_PERIOD[31:0]</obj_property>
       <obj_property name="ObjectShortName">CLK_HALF_PERIOD[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/sha3_phase">
-      <obj_property name="ElementShortName">sha3_phase[2:0]</obj_property>
-      <obj_property name="ObjectShortName">sha3_phase[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/wait_cnt">
-      <obj_property name="ElementShortName">wait_cnt[2:0]</obj_property>
-      <obj_property name="ObjectShortName">wait_cnt[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/wr_data_init_cnt">
-      <obj_property name="ElementShortName">wr_data_init_cnt[5:0]</obj_property>
-      <obj_property name="ObjectShortName">wr_data_init_cnt[5:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/tb_wr_data">
-      <obj_property name="ElementShortName">tb_wr_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_wr_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_freq_sim/dut/tb_we">
-      <obj_property name="ElementShortName">tb_we</obj_property>
-      <obj_property name="ObjectShortName">tb_we</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/tb_addr">
-      <obj_property name="ElementShortName">tb_addr[6:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_addr[6:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_freq_sim/dut/tb_dut_init">
-      <obj_property name="ElementShortName">tb_dut_init</obj_property>
-      <obj_property name="ObjectShortName">tb_dut_init</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/tb_dut_init_cnt">
-      <obj_property name="ElementShortName">tb_dut_init_cnt[2:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_dut_init_cnt[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_freq_sim/dut/tb_rdy">
-      <obj_property name="ElementShortName">tb_rdy</obj_property>
-      <obj_property name="ObjectShortName">tb_rdy</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/tb_rd_data">
-      <obj_property name="ElementShortName">tb_rd_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_rd_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/wr_data_rd_cnt">
-      <obj_property name="ElementShortName">wr_data_rd_cnt[5:0]</obj_property>
-      <obj_property name="ObjectShortName">wr_data_rd_cnt[5:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/tb_freq_sim/dut/LED">
+      <obj_property name="ElementShortName">LED[3:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/correct_hash">
+      <obj_property name="ElementShortName">correct_hash[511:0]</obj_property>
+      <obj_property name="ObjectShortName">correct_hash[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/block_size">
+      <obj_property name="ElementShortName">block_size[31:0]</obj_property>
+      <obj_property name="ObjectShortName">block_size[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/LED">
       <obj_property name="ElementShortName">LED[0:0]</obj_property>
       <obj_property name="ObjectShortName">LED[0:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/eval_cnt">
-      <obj_property name="ElementShortName">eval_cnt[5:0]</obj_property>
-      <obj_property name="ObjectShortName">eval_cnt[5:0]</obj_property>
+   <wvobject type="logic" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/tb_rdy">
+      <obj_property name="ElementShortName">tb_rdy</obj_property>
+      <obj_property name="ObjectShortName">tb_rdy</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_freq_sim/dut/eval_success">
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/wait_cnt">
+      <obj_property name="ElementShortName">wait_cnt[2:0]</obj_property>
+      <obj_property name="ObjectShortName">wait_cnt[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/wr_data_init_cnt">
+      <obj_property name="ElementShortName">wr_data_init_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data_init_cnt[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/tb_rd_data">
+      <obj_property name="ElementShortName">tb_rd_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rd_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/tb_wr_data">
+      <obj_property name="ElementShortName">tb_wr_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_wr_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/tb_addr">
+      <obj_property name="ElementShortName">tb_addr[6:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_addr[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/tb_dut_next">
+      <obj_property name="ElementShortName">tb_dut_next</obj_property>
+      <obj_property name="ObjectShortName">tb_dut_next</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/wr_data_rd_cnt">
+      <obj_property name="ElementShortName">wr_data_rd_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data_rd_cnt[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/eval_data">
+      <obj_property name="ElementShortName">eval_data[35:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">eval_data[35:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/tb_dut_init">
+      <obj_property name="ElementShortName">tb_dut_init</obj_property>
+      <obj_property name="ObjectShortName">tb_dut_init</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/tb_dut_init_cnt">
+      <obj_property name="ElementShortName">tb_dut_init_cnt[2:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_dut_init_cnt[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/eval_success">
       <obj_property name="ElementShortName">eval_success</obj_property>
       <obj_property name="ObjectShortName">eval_success</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/eval_data">
-      <obj_property name="ElementShortName">eval_data[6:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">eval_data[6:0][31:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/eval_cnt">
+      <obj_property name="ElementShortName">eval_cnt[6:0]</obj_property>
+      <obj_property name="ObjectShortName">eval_cnt[6:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_freq_sim/dut/hash_shreg">
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/hash_shreg">
       <obj_property name="ElementShortName">hash_shreg[511:0]</obj_property>
       <obj_property name="ObjectShortName">hash_shreg[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/output_size">
+      <obj_property name="ElementShortName">output_size[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_size[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/block_size">
+      <obj_property name="ElementShortName">block_size[31:0]</obj_property>
+      <obj_property name="ObjectShortName">block_size[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_freq_sim/dut/freq_test_part_empty_ins2/output_words">
+      <obj_property name="ElementShortName">output_words[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_words[31:0]</obj_property>
    </wvobject>
 </wave_config>
