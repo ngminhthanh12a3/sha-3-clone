@@ -104,7 +104,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 4
   set_param general.usePosixSpawnForFork 1
   set_param runs.launchOptions { -jobs 8  }
@@ -119,9 +118,11 @@ OPTRACE "set parameters" START { }
   set_property parent.project_path /home/thanh/vivado/crypto/sha3_clone/sha3_clone.xpr [current_project]
   set_property ip_output_repo /home/thanh/vivado/crypto/sha3_clone/sha3_clone.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/synth_1/top_freq_test.dcp
+  read_ip -quiet /home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc /home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc
 OPTRACE "read constraints: implementation" END { }
@@ -289,6 +290,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force -no_partial_mmi top_freq_test.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

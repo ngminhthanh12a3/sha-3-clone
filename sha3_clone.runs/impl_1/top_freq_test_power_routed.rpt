@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Tue Mar  3 15:17:22 2026
+| Date             : Wed Mar  4 05:49:47 2026
 | Host             : thanh-G7-MD running 64-bit Ubuntu 22.04.5 LTS
 | Command          : report_power -file top_freq_test_power_routed.rpt -pb top_freq_test_power_summary_routed.pb -rpx top_freq_test_power_routed.rpx
 | Design           : top_freq_test
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.264        |
+| Total On-Chip Power (W)  | 1.012        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.167        |
-| Device Static (W)        | 0.098        |
+| Dynamic (W)              | 0.912        |
+| Device Static (W)        | 0.100        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 83.8         |
-| Junction Temperature (C) | 26.2         |
+| Max Ambient (C)          | 80.4         |
+| Junction Temperature (C) | 29.6         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,19 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.014 |        3 |       --- |             --- |
-| Slice Logic             |     0.066 |     7725 |       --- |             --- |
-|   LUT as Logic          |     0.064 |     4034 |     63400 |            6.36 |
-|   Register              |     0.001 |     2590 |    126800 |            2.04 |
-|   F7/F8 Muxes           |    <0.001 |      333 |     63400 |            0.53 |
+| Clocks                  |     0.053 |        8 |       --- |             --- |
+| Slice Logic             |     0.238 |     9292 |       --- |             --- |
+|   LUT as Logic          |     0.220 |     4763 |     63400 |            7.51 |
+|   F7/F8 Muxes           |     0.014 |     1887 |     63400 |            2.98 |
+|   Register              |     0.004 |     2591 |    126800 |            2.04 |
 |   CARRY4                |    <0.001 |        8 |     15850 |            0.05 |
-|   Others                |     0.000 |        6 |       --- |             --- |
-|   LUT as Shift Register |     0.000 |        8 |     19000 |            0.04 |
-| Signals                 |     0.086 |     5238 |       --- |             --- |
+|   Others                |     0.000 |        9 |       --- |             --- |
+|   LUT as Shift Register |     0.000 |       17 |     19000 |            0.09 |
+| Signals                 |     0.497 |     3836 |       --- |             --- |
+| MMCM                    |     0.124 |        1 |         6 |           16.67 |
 | I/O                     |    <0.001 |        6 |       210 |            2.86 |
-| Static Power            |     0.098 |          |           |                 |
-| Total                   |     0.264 |          |           |                 |
+| Static Power            |     0.100 |          |           |                 |
+| Total                   |     1.012 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,8 +74,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.182 |       0.166 |      0.015 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.807 |       0.789 |      0.018 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.087 |       0.068 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -126,11 +127,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------------+-----------+-----------------+
-| Clock       | Domain    | Constraint (ns) |
-+-------------+-----------+-----------------+
-| sys_clk_pin | CLK100MHZ |            10.0 |
-+-------------+-----------+-----------------+
++----------------------+---------------------------------------+-----------------+
+| Clock                | Domain                                | Constraint (ns) |
++----------------------+---------------------------------------+-----------------+
+| CLK100MHZ            | CLK100MHZ                             |            10.0 |
+| clk_out1_clk_wiz_0   | clk_wiz_0_ins/inst/clk_out1_clk_wiz_0 |             3.3 |
+| clk_out1_clk_wiz_0_1 | clk_wiz_0_ins/inst/clk_out1_clk_wiz_0 |             3.3 |
+| clkfbout_clk_wiz_0   | clk_wiz_0_ins/inst/clkfbout_clk_wiz_0 |            10.0 |
+| clkfbout_clk_wiz_0_1 | clk_wiz_0_ins/inst/clkfbout_clk_wiz_0 |            10.0 |
+| sys_clk_pin          | CLK100MHZ                             |            10.0 |
++----------------------+---------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -142,9 +148,11 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| top_freq_test               |     0.167 |
-|   freq_test_part_empty_ins2 |     0.166 |
-|     dut                     |     0.157 |
+| top_freq_test               |     0.912 |
+|   clk_wiz_0_ins             |     0.125 |
+|     inst                    |     0.125 |
+|   freq_test_part_empty_ins2 |     0.787 |
+|     dut                     |     0.761 |
 +-----------------------------+-----------+
 
 

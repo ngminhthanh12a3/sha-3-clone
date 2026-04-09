@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1772525727" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/sha3_wrapper.dcp">
-  <File Type="VDS-TIMING-PB" Name="top_freq_test_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_freq_test_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1772577502" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/sha3_wrapper.dcp">
   <File Type="RDS-DCP" Name="top_freq_test.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="top_freq_test_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="top_freq_test_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_freq_test_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="top_freq_test.vds"/>
-  <File Type="REPORTS-TCL" Name="top_freq_test_reports.tcl"/>
+  <File Type="RDS-UTIL" Name="top_freq_test_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_freq_test_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="top_freq_test.tcl"/>
+  <File Type="REPORTS-TCL" Name="top_freq_test_reports.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/hdl/UART_TX_CTRL.vhd">
@@ -38,7 +35,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+    <File Path="$PSRCDIR/sources_1/new/freq_test_part_empty.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -46,7 +43,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/freq_test_part_empty.v">
+    <File Path="$PSRCDIR/sources_1/new/freq_test_part_long.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/freq_test_part_short.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

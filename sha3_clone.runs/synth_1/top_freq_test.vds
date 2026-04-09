@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Tue Mar  3 15:15:30 2026
-# Process ID         : 262903
+# Start of session at: Wed Mar  4 05:38:25 2026
+# Process ID         : 663692
 # Current directory  : /home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/synth_1
 # Command line       : vivado -log top_freq_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_freq_test.tcl
 # Log file           : /home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/synth_1/top_freq_test.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 22.04.5 LTS
 # Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
-# CPU Frequency      : 1284.088 MHz
+# CPU Frequency      : 800.655 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 67195 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 69343 MB
-# Available Virtual  : 63010 MB
+# Available Virtual  : 64187 MB
 #-----------------------------------------------------------
 source top_freq_test.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental /home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/utils_1/imports/synth_1/sha3_wrapper.dcp
@@ -34,85 +34,90 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 262999
+INFO: [Synth 8-7075] Helper process launched with PID 663794
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2230.566 ; gain = 483.562 ; free physical = 51402 ; free virtual = 58685
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2237.781 ; gain = 483.812 ; free physical = 51862 ; free virtual = 59890
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-9339] data object 'tb_rdy' is already declared [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:105]
-INFO: [Synth 8-6826] previous declaration of 'tb_rdy' is from here [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:52]
-CRITICAL WARNING: [Synth 8-11152] second declaration of 'tb_rdy' is ignored [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:105]
-WARNING: [Synth 8-6901] identifier 'wr_data_init_cnt' is used before its declaration [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:83]
-WARNING: [Synth 8-6901] identifier 'tb_dut_init_cnt' is used before its declaration [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:86]
-WARNING: [Synth 8-6901] identifier 'wr_data_rd_cnt' is used before its declaration [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:89]
-WARNING: [Synth 8-6901] identifier 'eval_cnt' is used before its declaration [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:92]
+CRITICAL WARNING: [Synth 8-9339] data object 'tb_rdy' is already declared [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:105]
+INFO: [Synth 8-6826] previous declaration of 'tb_rdy' is from here [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:52]
+CRITICAL WARNING: [Synth 8-11152] second declaration of 'tb_rdy' is ignored [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:105]
+WARNING: [Synth 8-6901] identifier 'wr_data_init_cnt' is used before its declaration [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:83]
+WARNING: [Synth 8-6901] identifier 'tb_dut_init_cnt' is used before its declaration [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:86]
+WARNING: [Synth 8-6901] identifier 'wr_data_rd_cnt' is used before its declaration [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:89]
+WARNING: [Synth 8-6901] identifier 'eval_cnt' is used before its declaration [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:92]
 INFO: [Synth 8-6157] synthesizing module 'top_freq_test' [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/top_freq_test.v:22]
-INFO: [Synth 8-6157] synthesizing module 'freq_test_part_empty' [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/synth_1/.Xil/Vivado-663692-thanh-G7-MD/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/synth_1/.Xil/Vivado-663692-thanh-G7-MD/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'freq_test_part_short' [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:23]
 	Parameter output_size bound to: 32'b00000000000000000000001000000000 
 	Parameter block_size bound to: 32'b00000000000000000000001001000000 
 INFO: [Synth 8-6157] synthesizing module 'sha3' [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/imports/rtl/sha3.v:46]
 INFO: [Synth 8-6155] done synthesizing module 'sha3' (0#1) [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/imports/rtl/sha3.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'freq_test_part_empty' (0#1) [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'freq_test_part_short' (0#1) [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'top_freq_test' (0#1) [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/top_freq_test.v:22]
-WARNING: [Synth 8-7137] Register eval_data_reg in module freq_test_part_empty has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
-WARNING: [Synth 8-7137] Register hash_shreg_reg in module freq_test_part_empty has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:174]
-WARNING: [Synth 8-4767] Trying to implement RAM 'eval_data_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_empty.v:180]
+WARNING: [Synth 8-7137] Register eval_data_reg in module freq_test_part_short has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register hash_shreg_reg in module freq_test_part_short has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:174]
+WARNING: [Synth 8-4767] Trying to implement RAM 'eval_data_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/sources_1/new/freq_test_part_short.v:180]
 Reason is one or more of the following :
 	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
-WARNING: [Synth 8-7129] Port CLK100MHZ in module freq_test_part_empty is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK100MHZ in module freq_test_part_short is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[3] in module top_freq_test is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[2] in module top_freq_test is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[1] in module top_freq_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[0] in module top_freq_test is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2337.535 ; gain = 590.531 ; free physical = 51304 ; free virtual = 58589
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2344.719 ; gain = 590.750 ; free physical = 51635 ; free virtual = 59665
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2355.348 ; gain = 608.344 ; free physical = 51304 ; free virtual = 58589
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2362.531 ; gain = 608.562 ; free physical = 51636 ; free virtual = 59665
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2355.348 ; gain = 608.344 ; free physical = 51304 ; free virtual = 58589
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2362.531 ; gain = 608.562 ; free physical = 51636 ; free virtual = 59665
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2355.348 ; gain = 0.000 ; free physical = 51319 ; free virtual = 58604
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2362.531 ; gain = 0.000 ; free physical = 51637 ; free virtual = 59666
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_ins'
+Finished Parsing XDC File [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_ins'
 Parsing XDC File [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
 WARNING: [Vivado 12-584] No ports matched 'UART_RXD_OUT'. [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc:220]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc:220]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_freq_test_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.srcs/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_freq_test_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_freq_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.117 ; gain = 0.000 ; free physical = 51317 ; free virtual = 58602
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2474.270 ; gain = 0.000 ; free physical = 51661 ; free virtual = 59690
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2458.152 ; gain = 0.000 ; free physical = 51317 ; free virtual = 58602
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2474.305 ; gain = 0.000 ; free physical = 51661 ; free virtual = 59690
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2458.152 ; gain = 711.148 ; free physical = 51376 ; free virtual = 58661
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2474.305 ; gain = 720.336 ; free physical = 51728 ; free virtual = 59757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2466.121 ; gain = 719.117 ; free physical = 51376 ; free virtual = 58661
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2482.273 ; gain = 728.305 ; free physical = 51728 ; free virtual = 59757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2466.121 ; gain = 719.117 ; free physical = 51376 ; free virtual = 58661
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2482.273 ; gain = 728.305 ; free physical = 51728 ; free virtual = 59757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2466.121 ; gain = 719.117 ; free physical = 51381 ; free virtual = 58668
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2482.273 ; gain = 728.305 ; free physical = 51742 ; free virtual = 59772
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -142,8 +147,8 @@ Detailed RTL Component Info :
 	   3 Input  512 Bit        Muxes := 1     
 	   2 Input   64 Bit        Muxes := 100   
 	   2 Input   32 Bit        Muxes := 28    
-	   2 Input   27 Bit        Muxes := 1     
-	   3 Input   27 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 1     
+	   3 Input   31 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 1     
 	   5 Input    3 Bit        Muxes := 1     
@@ -164,30 +169,30 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7129] Port CLK100MHZ in module freq_test_part_empty is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK100MHZ in module freq_test_part_short is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[3] in module top_freq_test is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[2] in module top_freq_test is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[1] in module top_freq_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[0] in module top_freq_test is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2712.020 ; gain = 965.016 ; free physical = 51097 ; free virtual = 58393
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2726.531 ; gain = 972.562 ; free physical = 51529 ; free virtual = 59570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2712.020 ; gain = 965.016 ; free physical = 51112 ; free virtual = 58408
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2726.531 ; gain = 972.562 ; free physical = 51528 ; free virtual = 59569
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2712.020 ; gain = 965.016 ; free physical = 51115 ; free virtual = 58412
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 2726.531 ; gain = 972.562 ; free physical = 51518 ; free virtual = 59559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2712.020 ; gain = 965.016 ; free physical = 51118 ; free virtual = 58415
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 2726.531 ; gain = 972.562 ; free physical = 51510 ; free virtual = 59550
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -204,38 +209,39 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_wiz_0_ins has unconnected pin reset
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 2736.832 ; gain = 989.828 ; free physical = 51108 ; free virtual = 58404
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 2745.344 ; gain = 991.375 ; free physical = 51511 ; free virtual = 59552
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 2736.832 ; gain = 989.828 ; free physical = 51108 ; free virtual = 58404
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 2745.344 ; gain = 991.375 ; free physical = 51511 ; free virtual = 59552
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2736.832 ; gain = 989.828 ; free physical = 51104 ; free virtual = 58400
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2745.344 ; gain = 991.375 ; free physical = 51511 ; free virtual = 59552
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2736.832 ; gain = 989.828 ; free physical = 51104 ; free virtual = 58400
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2745.344 ; gain = 991.375 ; free physical = 51511 ; free virtual = 59552
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2736.832 ; gain = 989.828 ; free physical = 51104 ; free virtual = 58400
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2745.344 ; gain = 991.375 ; free physical = 51511 ; free virtual = 59552
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2736.832 ; gain = 989.828 ; free physical = 51104 ; free virtual = 58400
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2745.344 ; gain = 991.375 ; free physical = 51511 ; free virtual = 59552
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -245,8 +251,10 @@ Static Shift Register Report:
 +--------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name   | RTL Name                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +--------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|top_freq_test | freq_test_part_empty_ins2/hash_shreg_reg[500] | 4      | 6     | YES          | NO                 | YES               | 6      | 0       | 
-|top_freq_test | freq_test_part_empty_ins2/hash_shreg_reg[482] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top_freq_test | freq_test_part_empty_ins2/hash_shreg_reg[505] | 4      | 9     | YES          | NO                 | YES               | 9      | 0       | 
+|top_freq_test | freq_test_part_empty_ins2/hash_shreg_reg[481] | 5      | 4     | YES          | NO                 | YES               | 4      | 0       | 
+|top_freq_test | freq_test_part_empty_ins2/hash_shreg_reg[424] | 6      | 3     | YES          | NO                 | YES               | 3      | 0       | 
+|top_freq_test | freq_test_part_empty_ins2/hash_shreg_reg[388] | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
 +--------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -257,59 +265,60 @@ Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     8|
-|3     |LUT1   |     5|
-|4     |LUT2   |  1490|
-|5     |LUT3   |    26|
-|6     |LUT4   |    16|
-|7     |LUT5   |   692|
-|8     |LUT6   |  2551|
-|9     |MUXF7  |   234|
-|10    |MUXF8  |    99|
-|11    |SRL16E |     8|
-|12    |FDCE   |   308|
-|13    |FDPE   |   149|
-|14    |FDRE   |  2133|
-|15    |IBUF   |     2|
-|16    |OBUF   |     1|
-|17    |OBUFT  |     3|
-+------+-------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     1|
+|2     |CARRY4  |     8|
+|3     |LUT1    |     5|
+|4     |LUT2    |   941|
+|5     |LUT3    |   747|
+|6     |LUT4    |    13|
+|7     |LUT5    |   495|
+|8     |LUT6    |  2579|
+|9     |MUXF7   |  1787|
+|10    |MUXF8   |   100|
+|11    |SRL16E  |    17|
+|12    |FDCE    |   310|
+|13    |FDPE    |   131|
+|14    |FDRE    |  2142|
+|15    |IBUF    |     1|
+|16    |OBUF    |     1|
+|17    |OBUFT   |     3|
++------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2736.832 ; gain = 989.828 ; free physical = 51104 ; free virtual = 58400
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2745.344 ; gain = 991.375 ; free physical = 51511 ; free virtual = 59552
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2736.832 ; gain = 887.023 ; free physical = 51104 ; free virtual = 58400
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2736.840 ; gain = 989.828 ; free physical = 51104 ; free virtual = 58400
+Synthesis finished with 0 errors, 1 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2745.344 ; gain = 879.602 ; free physical = 51511 ; free virtual = 59552
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2745.352 ; gain = 991.375 ; free physical = 51511 ; free virtual = 59552
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2736.840 ; gain = 0.000 ; free physical = 51276 ; free virtual = 58573
-INFO: [Netlist 29-17] Analyzing 341 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2745.352 ; gain = 0.000 ; free physical = 51681 ; free virtual = 59722
+INFO: [Netlist 29-17] Analyzing 1895 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'top_freq_test' is not ideal for floorplanning, since the cellview 'sha3' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2792.859 ; gain = 0.000 ; free physical = 51275 ; free virtual = 58572
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2801.371 ; gain = 0.000 ; free physical = 51533 ; free virtual = 59574
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 61f1097d
+Synth Design complete | Checksum: be395469
 INFO: [Common 17-83] Releasing license: Synthesis
-28 Infos, 17 Warnings, 3 Critical Warnings and 0 Errors encountered.
+30 Infos, 18 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:45 . Memory (MB): peak = 2792.895 ; gain = 1201.008 ; free physical = 51275 ; free virtual = 58572
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2086.990; main = 1880.751; forked = 281.003
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3714.414; main = 2792.863; forked = 1002.391
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:52 . Memory (MB): peak = 2801.406 ; gain = 1212.492 ; free physical = 51534 ; free virtual = 59574
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2106.589; main = 1895.208; forked = 279.894
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3728.930; main = 2801.375; forked = 1002.395
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2816.871 ; gain = 0.000 ; free physical = 51275 ; free virtual = 58572
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2825.383 ; gain = 0.000 ; free physical = 51532 ; free virtual = 59574
 INFO: [Common 17-1381] The checkpoint '/home/thanh/vivado/crypto/sha3_clone/sha3_clone.runs/synth_1/top_freq_test.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_freq_test_utilization_synth.rpt -pb top_freq_test_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar  3 15:16:18 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  4 05:39:23 2026...
